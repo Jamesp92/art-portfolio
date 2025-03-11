@@ -8,6 +8,7 @@ import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
+import Typography from "@mui/material/Typography";
 
 const Navbar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -20,22 +21,22 @@ const Navbar = () => {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <Toolbar sx={{ position: "relative" }}>
-          <Box
-            sx={{
-              position: "absolute",
-              left: "50%",
-              transform: "translateX(-50%)",
-            }}
-          >
-            <img src={logoUrl} alt="Logo" style={{ height: 40 }} />
+      <AppBar position="static" elevation={0} sx={{ backgroundColor: "white" }}>
+        <Toolbar sx={{ minHeight: 80, justifyContent: "center", position: "relative" }}>
+          <Box sx={{ textAlign: "center" }}>
+            <img src={logoUrl} alt="Logo" style={{ height: 40, marginBottom: 4, marginTop: 15 }} />
+            <Typography
+              variant="subtitle1"
+              sx={{ fontFamily: "Roboto, sans-serif", fontWeight: 300, color: "black" }}
+            >
+              Micheal Nugent
+            </Typography>
           </Box>
-          <Box sx={{ ml: "auto" }}>
+          <Box sx={{ position: "absolute", right: 16 }}>
             <IconButton
               size="large"
               edge="end"
-              color="inherit"
+              sx={{ color: "black" }}
               aria-label="menu"
               onClick={toggleDrawer}
             >
