@@ -1,18 +1,19 @@
-// src/App.jsx
 import React from "react";
-
-import Typography from "@mui/material/Typography";
+import Navbar from "./components/Navbar";
 import Container from "@mui/material/Container";
+import Typography from "@mui/material/Typography";
 
-function App() {
+const App = () => {
   return (
-    <Container>
-      <Typography variant="h2" component="h1" gutterBottom>
-        Welcome to Micheals art portfolio
-      </Typography>
-    
-    </Container>
+    <div>
+      <Navbar />
+      <Container sx={{ marginTop: 4 }}>
+        <Typography variant="h2" component="h1" gutterBottom>
+          Welcome to the Art Portfolio
+        </Typography>
+      </Container>
+    </div>
   );
-}
+};
 
 export default App;
